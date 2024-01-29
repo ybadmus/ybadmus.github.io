@@ -77,25 +77,41 @@
 
                 <article class="single-article-section"><!-- Start Articles Block -->
                     <div class="single-article-img rounded-t-xl">
-                        <img src="assets/img/toptal.png" alt="">
+                        <img src="assets/img/sql-processing-order.jpg" alt="">
                     </div>
                     <div class="space-y-7 mb-5 p-7 pb-0">
                         <div class="space-y-2">
-                            <h2 class="text-lg font-semibold">Why Use Ruby on Rails? My Take After Two Decades of Programming.</h2>
-                            <p><time datetime="2021-05-09 19:00" class="text-sm text-gray-400">May 09, 2021</time></p>
+                            <h2 class="text-lg font-semibold">SQL query processing order</h2>
+                            <p><time datetime="2021-05-09 19:00" class="text-sm text-gray-400">January 29, 2024</time></p>
                         </div>
                         <p class="text-gray-600">
-                            Sometimes I hear people complaining about their clients, saying that they insist on using Rails, that they’ve had too much Kool Aid. If they’re recruiters, they almost feel sick in the stomach about having to find yet another Ruby on Rails ‘primadona’ developer. Then they pull out something similar to this amazingly ignorant comparison between Git and PHP to prove their point. “They don’t even know what they’re asking for,” they say.
-                            <br><br>
-                            For us as programmers, sometimes it does indeed seem like our clients don’t have a clue. We love to exaggerate cases like this. When you think a bit about it, it does not seem right to think that a person that is giving me money to build things is somehow limited and ‘just doesn’t get it’. In fact, I believe that most clients know their options just fine and yet they still decide to go with Rails.
-                            <br><br>
-                            Rails beneficial enough to be seriously considered for a plethora of projects and needs.
-                            <br><br>
-                            Rails is suitable for both state-of-the-art public websites that compete with Single Page JavaScript applications, and complex enterprise core system applications that usually look a bit ‘uglier’ (with a more generic, lower fidelity UI), but compensate this blemish with a ton of complicated business rules and logic. Aside from these Ruby on Rails use cases, its benefit is that it is versatile and able to compete with both the sleek and the powerful.
-                            <br><br>
-                            For most of common problems, Rails has a component at your disposal almost right out-of-the-box with documentation that is consistently above average (somehow, the Rails core team persuaded contributors that writing documentation is cool (even though we all know it’s not), leading to well written, concise and time-saving docs).
-                            <br><br>
-                            When you put aside unicorns and Friday hugs, you end up with a mighty framework that you can be used both for your future game changer and your next middle-of-the-road business site. And with your pool of top-of-the-line gems, you have at your finger tips an arsenal that implements some of the brightest ideas in computer programming. With no fuss.
+                            Do you feel you have a decent understanding of <b>SQL</b> but often find yourself scratching your head trying to understand why a query doesn't work? 
+                            <br/><br/>
+                            Don't feel bad, it's not your fault! 
+                            <br/><br/>
+                            No one ever taught you how your queries are processed and why they work that way.
+                            <br/><br/>
+                            The <b>SQL</b> query processing order:
+                            <br/><br/>
+                            1. Source Data - First, the <b>FROM</b> clause is evaluated, and then the resulting data set is passed on to the next processing phase. Note that the JOINS clauses are all processed at this stage in the FROM clause.
+                            <br/><br/>
+                            2. Row Filter - The <b>WHERE</b> clause evaluates every row using the logical predicate; only rows for which the logical predicate is evaluated to be true will move to the next processing phase.
+                            <br/><br/>
+                            3. Grouping - The <b>GROUP BY</b> clause evaluates every record in the specified column(s) as a separate group based on the group by expression. The table is transformed into a hybrid grouped structure. 
+                            <br/><br/>
+                            4. Group Filter - The <b>HAVING</b> clause is similar to the WHERE clause in the sense that both consist of a logical predicate; only groups for which the logical predicate is evaluated to true will move to the next processing phase, and it will only be used after the GROUP BY clause.
+                            <br/><br/>
+                            5. Return Expression - The <b>SELECT</b> clause evaluates each row of the data set that was handed over to it, and it's utilized to indicate the columns that will be returned within the query results.
+                            <br/><br/>
+                            6. Presentation Order - The <b>ORDER BY</b> clause is used to specify the order in which the query results should be returned.
+                            <br/><br/>
+                            7. Pagination - The The <b>OFFSET FETCH</b> clause is used to separate large row sets into smaller chunks, known as pages.
+                            <br/><br/>
+                            SQL processing order is a fundamental aspect of <b>SQL</b>, but I see way too many SQL developers dive right into getting their hands dirty as a starting point and get stuck at that level for the rest of their careers.
+                            <br/><br/>
+                            In the next series of posts, we will explore more details on how the queries are processed at each of the steps mentioned above.
+                            <br/><br/>
+                            Have a productive week! 
                         </p>
                     </div>
                 </article><!-- Start Articles Block -->
