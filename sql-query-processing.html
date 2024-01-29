@@ -12,7 +12,7 @@
 <body class="bg-gray-100 antialiased">
     <main class="main-container">
         <div class="grid gap-5 lg:grid-cols-3">
-            
+
             <div class="space-y-5"><!-- Start Left Side -->
 
                 <div class="shadow rounded-xl overflow-hidden"><!-- Start User Block -->
@@ -75,65 +75,46 @@
 
             <div class="space-y-5 lg:col-span-2"><!-- Start Right Side -->
 
-                <div class="p-7 pb-0 block-section"><!-- Start About Me Block -->
-                    <h2 class="block-title">About me</h2>
-                    <p class="text-gray-600 mb-5"> Hi friends, I'm a full-stack software engineer with more than six years of professional experience developing web and mobile applications for small and large-scale businesses through effective global remote collaborations.
-                    
-                    <div class="flex flex-col space-y-4">
-                        <a href="#0" class="mail-link social-link-hover">
-                            <i class='bx bx-at text-xl'></i>
-                            <span>yusif.badmus@gmail.com</span>
-                        </a>
-            
-                        <ul class="flex space-x-5">
-                            <li>
-                                <a href="https://github.com/ybadmus" class="social-link-hover">
-                                    <i class='bx bxl-github text-2xl' ></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/ybadmus/" class="social-link-hover">
-                                    <i class='bx bxl-linkedin text-2xl' ></i>
-                                </a>
-                            </li>
-                        </ul>
+                <article class="single-article-section"><!-- Start Articles Block -->
+                    <div class="single-article-img rounded-t-xl">
+                        <img src="assets/img/sql-processing-order.jpg" alt="">
                     </div>
-
-                    <div class="border-t border-gray-200 my-5"></div>
-                    
-                    <ul class="flex space-x-8 font-medium">
-                        <li>
-                            <a href="index.html" class="menu-link menu-link-hover">Resume</a>
-                        </li>
-                        <li>
-                            <a href="projects.html" class="menu-link menu-link-hover">Projects</a>
-                        </li>
-                        <li>
-                            <a href="blog.html" class="menu-link-active menu-link-hover">Blog</a>
-                        </li>
-                    </ul>
-                </div><!-- End About Me Block -->
-
-                <a href="sql-query-processing.html" class="article-title-hover block"><!-- Start Articles Block -->
-                    <article class="article-section">
-                        <div class="space-y-3 mb-5 p-7 pb-0">
+                    <div class="space-y-7 mb-5 p-7 pb-0">
+                        <div class="space-y-2">
                             <h2 class="text-lg font-semibold">SQL query processing order</h2>
-                            
-                            <p class="text-gray-600">
-                                Do you feel you have a decent understanding of SQL but often find yourself scratching your head trying to understand why a query doesn't work? 
-                                <br/><br/>
-                                Don't feel bad, it's not your fault! 
-                                <br/><br/>
-                                No one ever taught you how your queries are processed and why they work that way.
-                            </p>
-                            <p><time datetime="2024-01-29 11:20" class="text-sm text-gray-400">January 29, 2024</time></p>
+                            <p><time datetime="2021-05-09 19:00" class="text-sm text-gray-400">January 29, 2024</time></p>
                         </div>
-
-                        <div class="article-img">
-                            <img src="assets/img/sql-processing-order.jpg" alt="">
-                        </div>
-                    </article>
-                </a><!-- Start Articles Block -->
+                        <p class="text-gray-600">
+                            Do you feel you have a decent understanding of <b>SQL</b> but often find yourself scratching your head trying to understand why a query doesn't work? 
+                            <br/><br/>
+                            Don't feel bad, it's not your fault! 
+                            <br/><br/>
+                            No one ever taught you how your queries are processed and why they work that way.
+                            <br/><br/>
+                            The <b>SQL</b> query processing order:
+                            <br/><br/>
+                            1. Source Data - First, the <b>FROM</b> clause is evaluated, and then the resulting data set is passed on to the next processing phase. Note that the JOINS clauses are all processed at this stage in the FROM clause.
+                            <br/><br/>
+                            2. Row Filter - The <b>WHERE</b> clause evaluates every row using the logical predicate; only rows for which the logical predicate is evaluated to be true will move to the next processing phase.
+                            <br/><br/>
+                            3. Grouping - The <b>GROUP BY</b> clause evaluates every record in the specified column(s) as a separate group based on the group by expression. The table is transformed into a hybrid grouped structure. 
+                            <br/><br/>
+                            4. Group Filter - The <b>HAVING</b> clause is similar to the WHERE clause in the sense that both consist of a logical predicate; only groups for which the logical predicate is evaluated to true will move to the next processing phase, and it will only be used after the GROUP BY clause.
+                            <br/><br/>
+                            5. Return Expression - The <b>SELECT</b> clause evaluates each row of the data set that was handed over to it, and it's utilized to indicate the columns that will be returned within the query results.
+                            <br/><br/>
+                            6. Presentation Order - The <b>ORDER BY</b> clause is used to specify the order in which the query results should be returned.
+                            <br/><br/>
+                            7. Pagination - The The <b>OFFSET FETCH</b> clause is used to separate large row sets into smaller chunks, known as pages.
+                            <br/><br/>
+                            SQL processing order is a fundamental aspect of <b>SQL</b>, but I see way too many SQL developers dive right into getting their hands dirty as a starting point and get stuck at that level for the rest of their careers.
+                            <br/><br/>
+                            In the next series of posts, we will explore more details on how the queries are processed at each of the steps mentioned above.
+                            <br/><br/>
+                            Have a productive week! 
+                        </p>
+                    </div>
+                </article><!-- Start Articles Block -->
 
             </div><!-- End Right Side -->
 
