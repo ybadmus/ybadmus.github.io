@@ -3270,10 +3270,10 @@ header.one-page .navbar-nav > li > a span {
 /***********************************************************************************************/
 /* 06. BLOG SINGLE PAGE */
 /***********************************************************************************************/
-.single-post-inner {
+/*.single-post-inner {
   background: #f9fafb;
-  padding: 30px;
-}
+  padding: 30px; 
+}*/
 .post-inner-featured-content {
   display: block;
 }
